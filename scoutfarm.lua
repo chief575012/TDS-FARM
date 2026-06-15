@@ -94,6 +94,8 @@ if game.PlaceId == 3260590327 then
             if table.find(map, elevatorMap) and playerCount < 1 and ElevatorType == getgenv().Typefarm  then
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Elevators"):WaitForChild("RF:Enter"):InvokeServer(elevator)
                 print("Joined elevator with map: " .. elevatorMap)
+                task.wait(0.1)
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Elevators"):WaitForChild("RF:SetSize"):InvokeServer(1)
             elseif playerCount > 2 then
 
                 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Elevators"):WaitForChild("RF:Leave"):InvokeServer()
