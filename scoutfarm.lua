@@ -96,6 +96,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Eleva
                 print("Joined elevator with map: " .. elevatorMap)
                 task.wait(0.1)
                 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Elevators"):WaitForChild("RF:SetSize"):InvokeServer(1)
+                task.wait(0.01)
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Elevators"):WaitForChild("RF:SetReady"):InvokeServer(true)
+
             elseif playerCount > 2 then
 
                 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Elevators"):WaitForChild("RF:Leave"):InvokeServer()
