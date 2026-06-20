@@ -1,3 +1,4 @@
+repeat task.wait() until Game:Isloaded()
 getgenv().StratCreditsAuthor = "ConstancePrimeau"
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/stratx/refs/heads/main/TDS/MainSource.lua", true))()
 TDS:Map("Tropical Isles", true, "Survival")
