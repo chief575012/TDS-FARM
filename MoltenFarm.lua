@@ -136,14 +136,14 @@ end
     elseif currentMap == map[3] then
         print("Current map is: " .. map[3])
         loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Sky_Islands"))()
-    elseif currentMap == map[4] then
+   --[[ elseif currentMap == map[4] then
         print("Current map is: " .. map[4])
 
    elseif currentMap == map[5] then
         print("Current map is: " .. map[5])
 
     elseif currentMap == map[6] then
-        print("Current map is: " .. map[6])
+        print("Current map is: " .. map[6])]]
 
 else
 TeleportService:Teleport(3260590327)
