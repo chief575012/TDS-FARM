@@ -84,9 +84,14 @@ end]]
 if game.PlaceId == 3260590327 then
     equipTowers()
     redeemreward()
+    --[[if Hardcore then 
+        local Elevators = game:GetService("Workspace").Elevator
+    else
+        local Elevators = game:GetService("Workspace").NewLobby.Elevator
+    ]]
     while true do
         task.wait()
-        for _, elevator in pairs(game:GetService("Workspace").Elevators:GetChildren()) do
+        for _, elevator in pairs(game:GetService("Workspace").NewLobby.Elevators:GetChildren()) do
             local elevatorMap = elevator:GetAttribute("Map")
             local ElevatorType = elevator:GetAttribute("Type")
             local playerCount = elevator:GetAttribute("Players")
