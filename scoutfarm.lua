@@ -9,7 +9,7 @@ else
 end
 
 getgenv().Typefarm = "Survival" --if you want Hardcore change it to Hardcore else not hardcore then Survival
-local map = {"Toyboard", "Grass Isle","Crossroads","Sky Islands","Forest Camp","Simplicity Remaster"} -- put map here
+local map = {"Tropical Isles","Four Seasons","Sky Islands",} -- put map here
 local towersToEquip = {"Crook Boss", "Assassin", "Commander", "Hunter", "Military Base"}
 local Remote = game:GetService("ReplicatedStorage").RemoteFunction
 local RunService = game:GetService("RunService") or cloneref(game:GetService("RunService"))
