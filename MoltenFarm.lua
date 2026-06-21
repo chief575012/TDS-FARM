@@ -124,20 +124,20 @@ else
 end
  if currentMap == map[1] then
         print("Current map is: " .. map[1])
-
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Tropical"))()
     elseif currentMap == map[2] then
         print("Current map is: " .. map[2])
-
-        elseif currentMap == map[3] then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Four_Seasons"))()
+    elseif currentMap == map[3] then
         print("Current map is: " .. map[3])
-
-        elseif currentMap == map[4] then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Sky_Islands"))()
+    elseif currentMap == map[4] then
         print("Current map is: " .. map[4])
 
-        elseif currentMap == map[5] then
+   elseif currentMap == map[5] then
         print("Current map is: " .. map[5])
 
-        elseif currentMap == map[6] then
+    elseif currentMap == map[6] then
         print("Current map is: " .. map[6])
 
 else
