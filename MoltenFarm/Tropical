@@ -1,5 +1,5 @@
 getgenv().StratCreditsAuthor = "Optional"
-local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/stratx/refs/heads/main/TDS/MainSource.lua", true))()
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/stratx/refs/heads/main/Test.lua", true))()
 TDS:Map("Tropical Isles", true, "Survival")
 TDS:Loadout({"Crook Boss", "Commander", "Assassin", "Hunter", "Military Base"})
 TDS:Mode("Molten")
