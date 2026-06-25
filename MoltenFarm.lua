@@ -35,6 +35,8 @@ local function checkmap(map)
 end
 local function redeemreward()
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("DailySpin"):WaitForChild("RF:RedeemReward"):InvokeServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("DailySpin"):WaitForChild("RF:RedeemSpin"):InvokeServer()
+
 end
 local function equipTowers()
     local troops = Remote:InvokeServer("Session", "Search", "Inventory.Troops")
