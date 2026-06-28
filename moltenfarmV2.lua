@@ -9,7 +9,7 @@ else
 end
 
 getgenv().Typefarm = "Survival" --if you want Hardcore change it to Hardcore else not hardcore then Survival
-local map = {"Tropical Isles","Toyboard","Summer Castle"} -- put map here
+local map = {"Tropical Isles","Toyboard","Summer Castle","Abyssal Trench"} -- put map here
 local towersToEquip = {"Minigunner", "Tesla", "Commander", "Turret", "Cowboy"}
 local Remote = game:GetService("ReplicatedStorage").RemoteFunction
 local RunService = game:GetService("RunService") or cloneref(game:GetService("RunService"))
@@ -36,7 +36,12 @@ end
 local function redeemreward()
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("DailySpin"):WaitForChild("RF:RedeemReward"):InvokeServer()
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("DailySpin"):WaitForChild("RF:RedeemSpin"):InvokeServer()
-
+for i=1,6 do 
+local args = {
+	i
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("PlaytimeRewards"):WaitForChild("RF:ClaimReward"):InvokeServer(unpack(args))
+end
 end
 local function equipTowers()
     local troops = Remote:InvokeServer("Session", "Search", "Inventory.Troops")
@@ -131,15 +136,17 @@ else
 end
  if currentMap == map[1] then
         print("Current map is: " .. map[1])
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Tropical"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarmV2/Tropical_Isles"))()
     elseif currentMap == map[2] then
         print("Current map is: " .. map[2])
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Four_Seasons"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarmV2/Toyboard.lua"))()
     elseif currentMap == map[3] then
         print("Current map is: " .. map[3])
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarm/Sky_Islands"))()
-   --[[ elseif currentMap == map[4] then
-        print("Current map is: " .. map[4])
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarmV2/Summer_Castle.lua"))()
+     elseif currentMap == map[4] then
+        print("Current map is: " .. map[3])
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chief575012/TDS-FARM/refs/heads/main/MoltenFarmV2/Abyssal_Trench.lua"))()
+   --[[
 
    elseif currentMap == map[5] then
         print("Current map is: " .. map[5])
