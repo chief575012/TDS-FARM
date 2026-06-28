@@ -33,6 +33,22 @@ end
 local function checkmap(map)
 --coming soon
 end
+function claimDailyQuest() 
+for _,v in pairs(game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Quests"):WaitForChild("RF:RequestState"):InvokeServer().groups.daily) do 
+for _,a in pairs(v) do  -- Claim All Quest
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Quests"):WaitForChild("RF:ClaimQuest"):InvokeServer(a)
+task.wait(0.2)
+end
+end
+end
+function claimWeeklyQuest()
+for _,v in pairs(game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Quests"):WaitForChild("RF:RequestState"):InvokeServer().groups.weekly) do 
+for _,a in pairs(v) do  -- Claim All Quest
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Quests"):WaitForChild("RF:ClaimQuest"):InvokeServer(a)
+task.wait(0.2)
+end
+end
+end
 local function redeemreward()
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("DailySpin"):WaitForChild("RF:RedeemReward"):InvokeServer()
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("DailySpin"):WaitForChild("RF:RedeemSpin"):InvokeServer()
@@ -41,6 +57,8 @@ local args = {
 	i
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("PlaytimeRewards"):WaitForChild("RF:ClaimReward"):InvokeServer(unpack(args))
+claimWeeklyQuest()
+claimDailyQuest() 
 end
 end
 local function equipTowers()
