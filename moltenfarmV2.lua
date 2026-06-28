@@ -146,7 +146,11 @@ elseif game.PlaceId == 5591597781 then
 end
     local currentMap = game:GetService("ReplicatedStorage").State.Map.Value]]
 local currentMap
-
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteFunction"):InvokeServer("TicketsManager","UnlockTimeScale")
+for i=1,2 do -- make it to x2
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer("TicketsManager","CycleTimeScale")
+task.wait(0.1)
+end
 if getgenv().mapcheckerbetter then
     currentMap = game:GetService("Workspace"):GetAttribute("Map")
 else
@@ -182,8 +186,8 @@ if getgenv().testingaudiofarm then
 local musicValue = workspace:WaitForChild("Music")
 
 musicValue:GetPropertyChangedSignal("Value"):Connect(function()
-    if musicValue.Value ~= "Night III 2024 Ambience" then
-        musicValue.Value = "Night III 2024 Ambience"
+    if musicValue.Value ~= "adidasLobby" then
+        musicValue.Value = "adidasLobby"
     end
 end)
 end
