@@ -187,7 +187,7 @@ musicValue:GetPropertyChangedSignal("Value"):Connect(function()
     end
 end)
 end
-getgenv().aprilfools = true
+getgenv().aprilfools = false
 if getgenv().aprilfools then
 if game.PlaceId == 5591597781 then
 repeat task.wait() until game:GetService("ReplicatedStorage").Assets.Troops.Scout
